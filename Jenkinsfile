@@ -3,7 +3,14 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo env.BUILD_NUMBER + ' and also the ' + env.MPEG
+        echo env.BUILD_NUMBER+' and also the '+env.MPEG
+      }
+    }
+
+    stage('publish') {
+      agent any
+      steps {
+        sh 'echo "$BUILD_NUMBER"'
       }
     }
 
