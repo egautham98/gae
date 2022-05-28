@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        echo 'Print the ${BUILD_NUMBER} of ${MPEG}'
+        echo 'Print the "${BUILD_NUMBER}" of "${MPEG}"'
       }
     }
 
